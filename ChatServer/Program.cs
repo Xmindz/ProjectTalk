@@ -11,7 +11,7 @@ namespace ChatServer
 {
     class Program
     {
-        static TcpListener tcpListener;
+        static TcpListener tcpListener; 
         static void Main(string[] args)
         {
             ThreadStart tsWaitClient = new ThreadStart(Program.WaitClient);
