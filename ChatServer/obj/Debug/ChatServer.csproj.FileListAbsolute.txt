@@ -1,0 +1,7 @@
+D:\Deepu\Test\ChatClient\ChatServer\obj\Debug\ResolveAssemblyReference.cache
+D:\Deepu\Test\ChatClient\ChatServer\bin\Debug\ChatServer.exe
+D:\Deepu\Test\ChatClient\ChatServer\bin\Debug\ChatServer.pdb
+D:\Deepu\Test\ChatClient\ChatServer\obj\Debug\ChatServer.exe
+D:\Deepu\Test\ChatClient\ChatServer\obj\Debug\ChatServer.pdb
+D:\Deepu\Test\ChatClient\ChatServer\bin\Debug\Commons.dll
+D:\Deepu\Test\ChatClient\ChatServer\bin\Debug\Commons.pdb

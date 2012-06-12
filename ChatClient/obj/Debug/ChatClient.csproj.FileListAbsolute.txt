@@ -1,0 +1,12 @@
+D:\Deepu\Test\ChatClient\ChatClient\bin\Debug\ChatClient.exe
+D:\Deepu\Test\ChatClient\ChatClient\bin\Debug\ChatClient.pdb
+D:\Deepu\Test\ChatClient\ChatClient\obj\Debug\ResolveAssemblyReference.cache
+D:\Deepu\Test\ChatClient\ChatClient\obj\Debug\ChatClient.Properties.Resources.resources
+D:\Deepu\Test\ChatClient\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.Cache
+D:\Deepu\Test\ChatClient\ChatClient\obj\Debug\ChatClient.exe
+D:\Deepu\Test\ChatClient\ChatClient\obj\Debug\ChatClient.pdb
+D:\Deepu\Test\ChatClient\ChatClient\obj\Debug\ChatClient.MessageWindow.resources
+D:\Deepu\Test\ChatClient\ChatClient\bin\Debug\Commons.dll
+D:\Deepu\Test\ChatClient\ChatClient\bin\Debug\Commons.pdb
+D:\Deepu\Test\ChatClient\ChatClient\obj\Debug\ChatClient.UserListWindow.resources
+D:\Deepu\Test\ChatClient\ChatClient\obj\Debug\ChatClient.Smilies.resources

@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9CAC88B-776A-46F0-AC35-987EFA3302BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChatClient</RootNamespace>
+    <AssemblyName>ChatClient</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ClientProcessor.cs" />
+    <Compile Include="Classes\HTMLFormatter.cs" />
+    <Compile Include="Classes\Statics.cs" />
+    <Compile Include="MessageWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageWindow.Designer.cs">
+      <DependentUpon>MessageWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MessageWindow.resx">
+      <DependentUpon>MessageWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Smilies.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Smilies.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Smilies.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Smilies.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Commons\Commons.csproj">
+      <Project>{BAEA26E7-23E4-4952-A70C-13066107E97B}</Project>
+      <Name>Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lipssealed.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\makeup.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finger.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mmm.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mooning.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muscle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nerd.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nod.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\party.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poolparty.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puke.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\punch.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rain.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rofl.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sadsmile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shake.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleepy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smirk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smoke.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speechless.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sweating.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\talking.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thinking.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tmi.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tongueout.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wasntme.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whew.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wink.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wondering.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worried.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yawn.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yes.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angry.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bigsmile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blush.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bow.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brokenheart.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bug.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cake.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clapping.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cool.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crying.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dance.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deepu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\devil.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doh.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drink.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drunk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dull.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evilgrin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fubar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giggle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handshake.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\happy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\headbang.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heidy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hi.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inlove.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kiss.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

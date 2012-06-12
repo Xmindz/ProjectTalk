@@ -1,0 +1,5 @@
+D:\Deepu\Test\ChatClient\Commons\bin\Release\Commons.dll
+D:\Deepu\Test\ChatClient\Commons\bin\Release\Commons.pdb
+D:\Deepu\Test\ChatClient\Commons\obj\Release\ResolveAssemblyReference.cache
+D:\Deepu\Test\ChatClient\Commons\obj\Release\Commons.dll
+D:\Deepu\Test\ChatClient\Commons\obj\Release\Commons.pdb
