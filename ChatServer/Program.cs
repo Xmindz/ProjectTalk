@@ -61,7 +61,7 @@ namespace ChatServer
                 {
                     if (!tcpClient.Connected)
                     {
-                        // Client gone offline.
+                        // Client went offline.
                         LogMessage("Client went offline.");
                         ServerProcessor.RemoveOfflineUsers();
                         break;
